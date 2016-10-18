@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var singlemovie_1 = require("../components/singlemovie/singlemovie");
 var movies_1 = require("../components/movies/movies");
 var MoviesModule = (function () {
     function MoviesModule() {
@@ -17,7 +18,7 @@ var MoviesModule = (function () {
     MoviesModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
-            declarations: [movies_1.MoviesComponent],
+            declarations: [movies_1.MoviesComponent, singlemovie_1.SingleMovieComponent],
             bootstrap: [movies_1.MoviesComponent]
         }), 
         __metadata('design:paramtypes', [])

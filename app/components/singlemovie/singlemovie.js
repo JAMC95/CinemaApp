@@ -16,7 +16,7 @@ var SingleMovieComponent = (function () {
         core_1.Component({
             selector: "single-movie",
             inputs: ["movie"],
-            template: "\n    <div class=\"col-md-4\">\n        <div class=\"panel panel-info\">\n            <div class=\"panel-heading\">\n                <h3 class=\"panel-title\">{{movie.title}}</h3>\n            </div>\n                <div class=\"panel-body\">\n                    <p>G\u00E9nero: {{movie.genre}}</p>\n                    <p>Nacionalidad: {{movie.nationality}}</p>\n                    <p>Director: {{movie.director}}</p>\n                    <p>Fecha de estreno: {{movie.release_date | date:\"short\"}}</p>\n                </div>\n        </div>\n    </div>\n"
+            template: "\n        <div class=\"col-md-4\">\n            <div class=\"panel panel-info\">\n                <div class=\"panel-heading\">\n                    <h3 class=\"panel-title\">{{ movie.title}}</h3>\n                </div>\n                <div class=\"panel-body\">\n                    <p>G\u00E9nero: {{ movie.genre }}</p>\n                    <p>Nacionalidad: {{ movie.nationality }}</p>\n                    <p>Director: {{ movie.director }}</p>\n                    <p>Fecha de esteno: {{ movie.release_date | date:\"short\" }}</p>\n                </div>\n            </div>\n        </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], SingleMovieComponent);
