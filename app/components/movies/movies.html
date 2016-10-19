@@ -12,7 +12,7 @@
     <div class="col-md12"><hr /></div>
 
     <single-movie
-            *ngFor="let movie of movies"
+            *ngFor="let movie of movies | search:  'title':movie"
             [movie]="movie">
     </single-movie>
 </div>

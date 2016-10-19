@@ -12,9 +12,9 @@ var core_1 = require("@angular/core");
 var SearchMoviesPipe = (function () {
     function SearchMoviesPipe() {
     }
-    SearchMoviesPipe.prototype.transform = function (value, _a) {
-        var field = _a[0], search = _a[1];
+    SearchMoviesPipe.prototype.transform = function (value, field, search) {
         if (typeof search == "undefined") {
+            console.log(search);
             return value;
         }
         return value.filter(function (res) {
