@@ -4,7 +4,7 @@ import {Pipe, PipeTransform} from "@angular/core";
     name: "search"
 })
 
-export class SearchMoviesPipe{
+export class SearchMoviesPipe implements PipeTransform{
     transform(value, field:string, search:string) {
 
         if(typeof search == "undefined"){
