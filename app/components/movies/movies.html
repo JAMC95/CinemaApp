@@ -1,5 +1,16 @@
 <div class="col-md-12">
     <h1 class="text-center">Películas de la app</h1>
+
+    <div class="col-md12"><hr /></div>
+     <div class="col-md12">
+         <div class="input-group">
+             <span class="input-group-addon">Buscar</span>
+             <input type="text" [(ngModel)]="movie" class="form-control">
+         </div>
+     </div>
+
+    <div class="col-md12"><hr /></div>
+
     <single-movie
             *ngFor="let movie of movies"
             [movie]="movie">
