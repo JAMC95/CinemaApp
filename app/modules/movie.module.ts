@@ -6,6 +6,7 @@ import {FormsModule} from "@angular/forms";
 import {SearchMoviesPipe} from "../pipes/search-movie-pipe";
 
 
+
 @NgModule({
 
     imports: [ BrowserModule, FormsModule ],
