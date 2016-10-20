@@ -13,14 +13,14 @@ var forms_1 = require("@angular/forms");
 var AddMovieComponent = (function () {
     function AddMovieComponent(builder) {
         this.movieForm = builder.group({
-            title: ["", forms_1.Validators.compose([
+            'title': ["", forms_1.Validators.compose([
                     forms_1.Validators.required, forms_1.Validators.minLength(8)
                 ])],
-            genre: ["", forms_1.Validators.compose([
+            'genre': ["", forms_1.Validators.compose([
                     forms_1.Validators.required, forms_1.Validators.minLength(4)
                 ])],
-            nationality: ["", forms_1.Validators.required],
-            director: ["", forms_1.Validators.required]
+            'nationality': ["", forms_1.Validators.required],
+            'director': ["", forms_1.Validators.required]
         });
     }
     AddMovieComponent = __decorate([
@@ -33,4 +33,10 @@ var AddMovieComponent = (function () {
     return AddMovieComponent;
 }());
 exports.AddMovieComponent = AddMovieComponent;
+/*TODO: https://angular.io/docs/ts/latest/cookbook/form-validation.html
+    Re-hacer el formulario para que quede lo más parecido a esto, habrá que tocar addmovie.html y este fichero
+    
+
+
+ */ 
 //# sourceMappingURL=addmovies.js.map

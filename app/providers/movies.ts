@@ -1,12 +1,13 @@
 import {Movie} from "../classes/movie";
 
-export class MoviesService{
-    movies: Movie[];
-    constructor(){
-        
+export class MoviesService {
+    movies:Movie[];
+
+    constructor() {
+
     }
-    
-    get(){
+
+    get() {
         return this.movies = [
             new Movie(
                 "El secreto de Amila",
@@ -65,6 +66,9 @@ export class MoviesService{
                 new Date("2015-12-25")
             )
         ];
-        
+
     }
+
+  
+
 }
