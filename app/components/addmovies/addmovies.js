@@ -26,7 +26,7 @@ var AddMovieComponent = (function () {
     AddMovieComponent = __decorate([
         core_1.Component({
             selector: "add-movie",
-            templateUrl: "./app/components/addmovies/addmovie.html"
+            templateUrl: "./app/components/addmovies/addmovie.html",
         }), 
         __metadata('design:paramtypes', [forms_1.FormBuilder])
     ], AddMovieComponent);

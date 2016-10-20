@@ -1,5 +1,5 @@
 <div class="col-md-12">
-    <form #f="nForm" [ngFormModel]="movieForm" (ngSubmit)="save(f.value)" id="movieForm">
+    <form #movieForm="ngForm"  (ngSubmit)="save(f.value)" id="movieForm">
         <div class="form-inline">
             <label for="title">Titulo:</label>
             <input type="text" ngControl="title" class="form-control" id="title">

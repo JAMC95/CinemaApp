@@ -3,7 +3,8 @@ import {FormGroup, FormControl} from "@angular/forms";
 import {FormBuilder, Validators} from "@angular/forms";
 @Component ({
     selector: "add-movie",
-    templateUrl: "./app/components/addmovies/addmovie.html"
+    templateUrl: "./app/components/addmovies/addmovie.html",
+     
 })
 
 export class AddMovieComponent{
