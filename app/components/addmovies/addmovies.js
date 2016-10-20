@@ -8,10 +8,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
+var movie_1 = require("../../classes/movie");
+var movies_1 = require("../movies/movies");
 var AddMovieComponent = (function () {
-    function AddMovieComponent(builder) {
+    function AddMovieComponent(builder, app) {
+        this.submitted = false;
+        this.app = app;
         this.movieForm = builder.group({
             'title': ["", forms_1.Validators.compose([
                     forms_1.Validators.required, forms_1.Validators.minLength(8)
@@ -23,20 +30,21 @@ var AddMovieComponent = (function () {
             'director': ["", forms_1.Validators.required]
         });
     }
+    AddMovieComponent.prototype.onSubmit = function () {
+        this.submitted = true;
+        this.movie = this.movieForm.value;
+        this.app.movies.push(new movie_1.Movie(this.movie.title, this.movie.genre, this.movie.nationality, this.movie.director, new Date()));
+        document.getElementById("moviesForm").reset();
+    };
     AddMovieComponent = __decorate([
         core_1.Component({
             selector: "add-movie",
             templateUrl: "./app/components/addmovies/addmovie.html",
-        }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder])
+        }),
+        __param(1, core_1.Inject(core_1.forwardRef(function () { return movies_1.MoviesComponent; }))), 
+        __metadata('design:paramtypes', [forms_1.FormBuilder, movies_1.MoviesComponent])
     ], AddMovieComponent);
     return AddMovieComponent;
 }());
 exports.AddMovieComponent = AddMovieComponent;
-/*TODO: https://angular.io/docs/ts/latest/cookbook/form-validation.html
-    Re-hacer el formulario para que quede lo más parecido a esto, habrá que tocar addmovie.html y este fichero
-    
-
-
- */ 
 //# sourceMappingURL=addmovies.js.map

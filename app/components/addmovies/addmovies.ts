@@ -1,6 +1,9 @@
-import {Component} from "@angular/core";
-import {FormGroup, FormControl} from "@angular/forms";
+import {Component, Inject, forwardRef} from "@angular/core";
+import {FormGroup} from "@angular/forms";
 import {FormBuilder, Validators} from "@angular/forms";
+import {Movie} from "../../classes/movie";
+import {MoviesComponent} from "../movies/movies"
+
 @Component ({
     selector: "add-movie",
     templateUrl: "./app/components/addmovies/addmovie.html",
@@ -9,8 +12,11 @@ import {FormBuilder, Validators} from "@angular/forms";
 
 export class AddMovieComponent{
     movieForm: FormGroup;
+    movie:Movie;
+    app: MoviesComponent;
 
-    constructor(builder: FormBuilder){
+    constructor(builder: FormBuilder, @Inject(forwardRef(() => MoviesComponent )) app: MoviesComponent){
+        this.app = app;
         this.movieForm = builder.group({
             'title': ["", Validators.compose(
                 [
@@ -28,12 +34,23 @@ export class AddMovieComponent{
 
     }
 
+    submitted = false;
+
+    onSubmit() {
+        this.submitted = true;
+        this.movie = this.movieForm.value;
+        this.app.movies.push(
+            new Movie(
+                this.movie.title, this.movie.genre, this.movie.nationality, this.movie.director, new Date()
+            )
+        );
+        document.getElementById("moviesForm").reset();
+
+    }
+
+
+
+
 }
 
 
-/*TODO: https://angular.io/docs/ts/latest/cookbook/form-validation.html
-    Re-hacer el formulario para que quede lo más parecido a esto, habrá que tocar addmovie.html y este fichero
-    
-
-
- */

@@ -4,8 +4,6 @@ import {SingleMovieComponent} from "../components/singlemovie/singlemovie";
 import {MoviesComponent} from "../components/movies/movies";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SearchMoviesPipe} from "../pipes/search-movie-pipe";
-
-
 import {AddMovieComponent} from "../components/addmovies/addmovies";
 
 
