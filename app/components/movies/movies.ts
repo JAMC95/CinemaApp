@@ -15,5 +15,9 @@ export class MoviesComponent {
             this.movies = moviesService.get();
     }
     
-    
+    /*
+
+    TODO: Añadir campo fecha para las nuevas peliculas
+    TODO: Añadir comprobante para no poder repetir una misma pelicula
+     */
 }
