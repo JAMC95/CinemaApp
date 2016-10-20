@@ -15,7 +15,7 @@ var AddMovieComponent = (function () {
     AddMovieComponent = __decorate([
         core_1.Component({
             selector: "add-movie",
-            template: "\n     \n     "
+            templateUrl: "./app/components/addmovies/addmovie.html"
         }), 
         __metadata('design:paramtypes', [])
     ], AddMovieComponent);
