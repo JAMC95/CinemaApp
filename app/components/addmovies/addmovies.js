@@ -34,7 +34,7 @@ var AddMovieComponent = (function () {
         this.submitted = true;
         this.movie = this.movieForm.value;
         this.app.movies.push(new movie_1.Movie(this.movie.title, this.movie.genre, this.movie.nationality, this.movie.director, new Date()));
-        document.getElementById("moviesForm").reset();
+        document.getElementById("movieForm").reset();
     };
     AddMovieComponent = __decorate([
         core_1.Component({

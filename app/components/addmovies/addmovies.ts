@@ -44,7 +44,7 @@ export class AddMovieComponent{
                 this.movie.title, this.movie.genre, this.movie.nationality, this.movie.director, new Date()
             )
         );
-        document.getElementById("moviesForm").reset();
+        document.getElementById("movieForm").reset();
 
     }
 
