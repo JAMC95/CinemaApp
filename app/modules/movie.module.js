@@ -14,13 +14,16 @@ var singlemovie_1 = require("../components/singlemovie/singlemovie");
 var movies_1 = require("../components/movies/movies");
 var forms_1 = require("@angular/forms");
 var search_movie_pipe_1 = require("../pipes/search-movie-pipe");
+var forms_2 = require("@angular/forms");
+var directives_1 = require("@angular/forms/src/directives");
+var addmovies_1 = require("../components/addmovies/addmovies");
 var MoviesModule = (function () {
     function MoviesModule() {
     }
     MoviesModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [movies_1.MoviesComponent, singlemovie_1.SingleMovieComponent, search_movie_pipe_1.SearchMoviesPipe],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_2.FormBuilder, forms_2.Validators, directives_1.FORM_DIRECTIVES],
+            declarations: [movies_1.MoviesComponent, singlemovie_1.SingleMovieComponent, search_movie_pipe_1.SearchMoviesPipe, addmovies_1.AddMovieComponent],
             bootstrap: [movies_1.MoviesComponent]
         }), 
         __metadata('design:paramtypes', [])

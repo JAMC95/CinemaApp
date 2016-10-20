@@ -9,15 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
 var AddMovieComponent = (function () {
-    function AddMovieComponent() {
+    function AddMovieComponent(builder) {
+        this.movieForm = builder.group({
+            title: ["", forms_1.Validators.compose([
+                    forms_1.Validators.required, forms_1.Validators.minLength(8)
+                ])],
+            genre: ["", forms_1.Validators.compose([
+                    forms_1.Validators.required, forms_1.Validators.minLength(4)
+                ])],
+            nationality: ["", forms_1.Validators.required],
+            director: ["", forms_1.Validators.required]
+        });
     }
     AddMovieComponent = __decorate([
         core_1.Component({
             selector: "add-movie",
             templateUrl: "./app/components/addmovies/addmovie.html"
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [forms_1.FormBuilder])
     ], AddMovieComponent);
     return AddMovieComponent;
 }());
