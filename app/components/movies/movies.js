@@ -9,15 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var movies_1 = require("../../providers/movies");
 var MoviesComponent = (function () {
-    function MoviesComponent() {
+    function MoviesComponent(moviesService) {
+        this.moviesService = moviesService;
+        this.movies = moviesService.get();
     }
     MoviesComponent = __decorate([
         core_1.Component({
             selector: "app-movies",
-            templateUrl: "./app/components/movies/movies.html"
+            templateUrl: "./app/components/movies/movies.html",
+            providers: [movies_1.MoviesService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [movies_1.MoviesService])
     ], MoviesComponent);
     return MoviesComponent;
 }());
